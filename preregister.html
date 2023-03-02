@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EnchApp</title>
+    <link rel="stylesheet" href="./css/preregister.css" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '349471142342581');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=349471142342581&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137703842-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-137703842-1');
+    </script>
+  </head>
+  <body>
+    <div class="notify"><span id="notifyType" class=""></span></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__logo">
+          <a href="/" data-text="ENCH APP" class="hero__header__logo__link">
+            <img src="./images/logo_img.svg" alt="Logo" />
+          </a>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="left">
+          <div class="register__text">
+            <h1 class="title">Early-bird registration</h1>
+            <h2 class="text">
+              Enter your Instagram username and email so that we can contact you
+              and provide early access to the platform.
+            </h2>
+          </div>
+
+          <form
+            class="form"
+            id="preregister-form"
+            method="post"
+            action="http://enchapp.com:1334/api/subscriber"
+          >
+            <div class="form__input">
+              <p class="form__input__error">enter username</p>
+              <label for="username">Your instagram username</label>
+              <input name="username" type="text" id="username" required />
+            </div>
+
+            <div class="form__input">
+              <p class="form__input__error">enter a correct email</p>
+              <label for="email">Your email</label>
+              <input name="email" type="email" id="email" required />
+            </div>
+
+            <div class="form__submit form__submit--disabled">
+              <button
+                type="button"
+                class="button button--t3"
+                id="preregister-button"
+              >
+                Preregister now
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="right"></div>
+      </div>
+    </div>
+    <script src="./js/bundle-min.js"></script>
+  </body>
+</html>
